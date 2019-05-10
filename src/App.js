@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-// import AllStreamers from './components/AllStreamers'
+import AllStreamers from './components/AllStreamers'
 import Streamers from './components/Streamers'
-// import AddStreamer from './components/AddStreamer'
+import AddStreamer from './components/AddStreamer'
 
 function App() {
   return (
     <div className="App">
-      {/* <AllStreamers /> */}
+      <AllStreamers />
       <Streamers />
-      {/* <AddStreamer /> */}
+      <AddStreamer />
     </div>
   );
 }

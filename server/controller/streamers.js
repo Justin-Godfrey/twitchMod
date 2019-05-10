@@ -20,11 +20,10 @@ let streamers = [
       
       getStreamersById: (req, res) => {
           const { id } = req.params
-          const streamers = streamers.filter((streamer) => {
-              return event.id === +id
+          const twitchStreamer = streamers.filter((streamer) => {
+              return streamer.id === +id
           })
-
-          res.status(200).send(streamer[0])
+          res.status(200).send(twitchStreamer[0])
       },
 
       addStreamer: (req, res) => {
@@ -39,10 +38,28 @@ let streamers = [
           res.status(200).send(newStreamer)
       },
       updateStreamer: (req, res) => {
-       
+       const { id } = req.params
+       const { followers } = req.body
+       for(let i = 0; i < streamers.length; i++) {
+           if (streamers[i].id === +id) {
+               streamers[i].followers = followers
+               res.send(streamers[i])
+           }
+       }
       },
 
       deleteStreamer: (req, res) => {
-          
+        const { id } = req.params
+        console.log(id)
+
+        streamers = streamers.filter((streamer) => {
+           return streamer.id !== +id
+        })
+        console.log(streamers)
+        res.sendStatus(200)
       }
-  }
+        }
+     
+     
+    
+  
