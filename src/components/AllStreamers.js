@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Streamer from './Streamer'
 
 class AllStreamers extends Component {
     constructor() {
@@ -20,10 +21,7 @@ class AllStreamers extends Component {
     render() {
         const streamers = this.state.streamers.map((event) => {
             return (
-                <li key={streamers.id}>
-                <h3>{streamers.name}</h3>
-                <p>Followers: {streamers.followers}</p>
-                </li>
+                <Streamer key={event.id} event={event}/>
             )
         })
         return (

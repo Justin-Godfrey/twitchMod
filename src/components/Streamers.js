@@ -18,6 +18,9 @@ class Streamers extends Component {
                selectedStreamer: res.data
            }) 
         })
+        .catch((error) => {
+            console.log(error)
+        })
     }
     handleUpdateID = (e) => {
         this.setState({
