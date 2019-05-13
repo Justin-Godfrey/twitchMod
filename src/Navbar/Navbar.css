@@ -4,6 +4,7 @@
     width: 100%;
     background: black;
     display: flex;
+    margin-top: -21px;
 }
 
 .Navbar_style {
