@@ -58,26 +58,26 @@ class Streamers extends Component {
         console.log(this.state)
         return (
             <div>
-                <h1>Streamer By Id</h1>
+                <h1>Find Streamer by ID!</h1>
                 <input onChange={this.handleUpdateID}/>
-                <button onClick={this.handleGetStreamerById}>Find Streamer</button>
+                <button onClick={this.handleGetStreamerById}>Make Magic Happen</button>
                     {this.state.selectedStreamer ?
                     <div>
                         <h2>{this.state.selectedStreamer.name}</h2>
                         <h3>{this.state.selectedStreamer.followers}</h3> 
                         <img src={this.state.selectedStreamer.profile_image}></img>
                         <div>
-                        <button onClick={this.deleteStreamer}>Delete</button>
+                        <button onClick={this.deleteStreamer}>Click to Delete (They probably deserve it)</button>
                         
                         </div>
                         <div>
-                            <h1>Update Streamer</h1>
-                            <input type='text' placeholder='New Follower Count' onChange={this.handleUpdateFollower}/>
-                            <button onClick={() => this.updateStreamer(this.state.selectedStreamer.id) }>Update</button>
+                            <h1>Give them more followers!</h1>
+                            <input type='text' placeholder='Enter unrealistic follower Number here' onChange={this.handleUpdateFollower}/>
+                            <button onClick={() => this.updateStreamer(this.state.selectedStreamer.id) }>False Hope</button>
                         </div>
                     </div>  
                     :
-                    <div>Please Select Streamer Id</div> 
+                    <div>Put the ID in the box, JUST DO IT!</div> 
                 }
             </div>
         )

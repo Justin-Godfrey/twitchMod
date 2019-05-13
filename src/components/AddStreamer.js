@@ -30,19 +30,19 @@ class AddStreamer extends Component {
     render() {
         return (
             <div>
-                <h1>Add Streamer</h1>
+                <h1>Lets add some people to the Crew!</h1>
                 <form onSubmit={this.handleAddStreamer}>
                 <input
-                placeholder='name'
+                placeholder='Streamer Name'
                 name='streamerName'
                 onChange={this.handleUpdateInput}
                 />
                 <input
-                placeholder='Followers'
+                placeholder='Followers (Be nice)'
                 name='followers'
                 onChange={this.handleUpdateInput}
                 />
-                <button>Add Streamer</button>
+                <button>Click here to welcome them!</button>
                 </form>
             </div>
         )
