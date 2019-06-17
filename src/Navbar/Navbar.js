@@ -7,8 +7,11 @@ const Navbar = props => (
         <nav className="Navbar_style">
             <div className="Navbar_logo">TwitchMod</div>
         </nav>
-        
+
     </header>
 );
 
 export default Navbar
+
+
+//functional component that displays our title

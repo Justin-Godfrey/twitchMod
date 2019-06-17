@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+//class component storing local state
 class AddStreamer extends Component {
     constructor() {
         super()
@@ -10,12 +11,15 @@ class AddStreamer extends Component {
         }
     }
 
+    //method to keep track of data that we put into input field
     handleUpdateInput = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
+
+        //http post request to send information to server to add new user
     handleAddStreamer = (e) => {
         e.preventDefault()
         axios.post('/api/addStreamer', {
@@ -27,6 +31,8 @@ class AddStreamer extends Component {
         })
     }
 
+
+        //displaying information to browser
     render() {
         return (
             <div>

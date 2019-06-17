@@ -17,3 +17,8 @@ function App() {
 }
 
 export default App;
+
+
+// This is the entry level for our application. Top level component 
+
+//this is where we are bringing in our child components

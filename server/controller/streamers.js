@@ -1,3 +1,5 @@
+//controller file where we store the handler functions that will execute when a specific end point is hit on our server
+
 let streamers = [
     {
       id: 1,
@@ -14,10 +16,11 @@ let streamers = [
   ]
 
   module.exports = {
+      //handler function to get all streamers from streamers array
       getAllStreamers: (req, res) => {
           res.status(200).send(streamers)
       },
-      
+      //handler funtion to get specific streamer based on their id
       getStreamersById: (req, res) => {
           const { id } = req.params
           const twitchStreamer = streamers.filter((streamer) => {
@@ -26,6 +29,7 @@ let streamers = [
           res.status(200).send(twitchStreamer[0])
       },
 
+      //handler function to create streamer
       addStreamer: (req, res) => {
           let id = streamers[streamers.length - 1].id + 1
           const { name, followers } = req.body
@@ -37,6 +41,8 @@ let streamers = [
           streamers = [...streamers, newStreamer]
           res.status(200).send(newStreamer)
       },
+
+      //handler function to update specific streamer followers based in id
       updateStreamer: (req, res) => {
        const { id } = req.params
        const { followers } = req.body
@@ -48,6 +54,8 @@ let streamers = [
        }
       },
 
+
+      //handler function to delete a particular streamer
       deleteStreamer: (req, res) => {
         const { id } = req.params
         console.log(id)

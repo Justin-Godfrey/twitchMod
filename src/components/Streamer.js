@@ -8,3 +8,5 @@ export default function Streamer(props) {
         </li>
     )
 }
+
+//functional component to display information about streamer by passing props
